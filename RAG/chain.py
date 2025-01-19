@@ -18,7 +18,7 @@ def format_docs(docs):
 
 
 # 체인 생성
-def create_chain(prompt, retriever, temperature, model_name="gpt-4o"):
+def create_chain(prompt, retriever, temperature, model_name="gpt-4o-mini"):
 
     llm = ChatOpenAI(model_name=model_name, temperature=temperature)
 
