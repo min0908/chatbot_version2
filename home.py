@@ -1,2 +1,2 @@
 import streamlit as st
-st.tilte("chatbot")
+st.title("chatbot")
