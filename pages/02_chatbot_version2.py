@@ -61,6 +61,13 @@ with st.sidebar:
         
         care_selected_model = st.sidebar.radio('역할을을 선택하세요:',('The Empathetic Expert', 'The Mindful Companion'))
 
+         # 역할이 변경될 때마다 이전 대화 초기화
+        if care_selected_model != st.session_state.get("last_care_selected_model", None):
+            st.session_state["messages"] = []  
+            st.session_state["store"] = {}  
+        
+        st.session_state["last_care_selected_model"] = care_selected_model
+
         if care_selected_model == 'The Empathetic Expert':
             loaded_prompt = load_prompt("./prompts/empathetic_expert.yaml", encoding="utf8")
         elif care_selected_model == 'The Mindful Companion':
@@ -72,6 +79,13 @@ with st.sidebar:
 
         info_selected_model = st.sidebar.radio('역할을 선택하세요:',('Digital Health Coach', 'The Health Curator'))
 
+        # 역할이 변경될 때마다 이전 대화 초기화
+        if info_selected_model != st.session_state.get("last_info_selected_model", None):
+            st.session_state["messages"] = []  
+            st.session_state["store"] = {}  
+        
+        st.session_state["last_info_selected_model"] = info_selected_model
+        
         if info_selected_model == 'Digital Health Coach':
             loaded_prompt = load_prompt("./prompts/digital_health_coach.yaml", encoding="utf8")
         elif info_selected_model == 'The Health Curator':
