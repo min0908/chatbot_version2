@@ -106,7 +106,7 @@ if user_text_apply_btn:
     chain = create_chain(
         prompt,
         st.session_state["retriever"],
-        temperature=0,
+        temperature=0.5,
         model_name="gpt-4o-mini",
     )
     st.session_state["chain"] = chain
