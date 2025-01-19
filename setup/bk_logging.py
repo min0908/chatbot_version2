@@ -1,10 +1,10 @@
 import os
-
+import streamlit as st
 
 def langsmith(project_name=None, set_enable=True):
 
     if set_enable:
-        result = os.environ.get("LANGCHAIN_API_KEY")
+        result = st.secrets.get("LANGCHAIN_API_KEY")
         if result is None or result.strip() == "":
             print(
                 "LangChain API Key가 설정되지 않았습니다. 참고: https://wikidocs.net/250954"
