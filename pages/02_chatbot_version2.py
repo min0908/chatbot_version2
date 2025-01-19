@@ -59,7 +59,7 @@ with st.sidebar:
     if mode == '감정 케어 모드':
         st.sidebar.subheader('감정 케어 모드 선택')
         
-        care_selected_model = st.sidebar.radio('역할를 선택하세요:',('The Empathetic Expert', 'The Mindful Companion'))
+        care_selected_model = st.sidebar.radio('역할을을 선택하세요:',('The Empathetic Expert', 'The Mindful Companion'))
 
         if care_selected_model == 'The Empathetic Expert':
             loaded_prompt = load_prompt("./prompts/empathetic_expert.yaml", encoding="utf8")
@@ -70,7 +70,7 @@ with st.sidebar:
     elif mode == '정보 제공 모드':
         st.sidebar.subheader('정보 제공 모드 선택')
 
-        info_selected_model = st.sidebar.radio('역할를 선택하세요:',('Digital Health Coach', 'The Health Curator'))
+        info_selected_model = st.sidebar.radio('역할을 선택하세요:',('Digital Health Coach', 'The Health Curator'))
 
         if info_selected_model == 'Digital Health Coach':
             loaded_prompt = load_prompt("./prompts/digital_health_coach.yaml", encoding="utf8")
