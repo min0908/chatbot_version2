@@ -20,13 +20,13 @@ template: |
  If no documents are available, answer based on your best knowledge.
  Answer in Korean.
 
-  #Question:
-  {question}
+ #Question:
+ {question}
 
-  #Context: 
-  {context}
+ #Context: 
+ {context}
 
-  #Answer:
+ #Answer:
 input_variables: ["question", "context"]
 
 
